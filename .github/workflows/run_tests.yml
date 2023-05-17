@@ -18,5 +18,7 @@ jobs:
           packages: git nasm build-essential qemu gdb
           version: 1.0
       - name: run initial-xv6
-        run: inital-xv6/test-getreadcount.sh
+        working-directory: ./inital-xv6
+        run: bash test-getreadcount.sh
+      
 
