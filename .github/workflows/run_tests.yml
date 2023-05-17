@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v3
     - uses: awalsh128/cache-apt-pkgs-action@latest
       with:
-        packages: git nasm build-essential qemu gdb
+        packages: git nasm build-essential gcc-multilib qemu gdb
         version: 1.0
     - name: run initial-xv6
       working-directory: initial-xv6
