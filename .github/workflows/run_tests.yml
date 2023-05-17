@@ -21,6 +21,7 @@ jobs:
       working-directory: initial-xv6
       run: bash test-getreadcount.sh
     - name: debug initial-xv6
+      if: always()
       working-directory: initial-xv6
       run: diff tests/1.out tests-out/1.out
       
