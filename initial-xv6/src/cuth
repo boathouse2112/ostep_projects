@@ -25,7 +25,7 @@ for($i=0; $i<@ARGV; $i++){
 	$obj =~ s/\.c\.o$/.o/;
 	system("touch $file");
 
-	if(system("make CC='gcc -Werror' $obj >/dev/null 2>\&1") != 0){
+	if(system("make CC='gcc' $obj >/dev/null 2>\&1") != 0){
 		print STDERR "make $obj failed: $rv\n";
 		next;
 	}
