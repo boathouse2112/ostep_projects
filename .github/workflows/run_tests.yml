@@ -17,8 +17,6 @@ jobs:
       with:
         packages: git nasm build-essential qemu gdb
         version: 1.0
-    - run: ls
-    - run: ls ${{github.workspace}}
     - name: run initial-xv6
       working-directory: inital-xv6
       run: bash test-getreadcount.sh
