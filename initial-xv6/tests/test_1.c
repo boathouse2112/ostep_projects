@@ -1,11 +1,14 @@
 #include "types.h"
 #include "stat.h"
 #include "user.h"
+#include <stdio.h>
 
 int
 main(int argc, char *argv[]) {
+  printf("GETTING READ COUNT");
   int x1 = getreadcount();
   int x2 = getreadcount();
+  printf("GOTTEN READ COUNT");
   char buf[100];
   (void) read(4, buf, 1);
   int x3 = getreadcount();
